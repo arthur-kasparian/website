@@ -1,0 +1,16 @@
+/************************************************
+ * Copyright (c) 2026 Arthur Kasparian          *
+ * All rights reserved.                         *
+ ************************************************/
+
+@font-face {
+	font-family: 'Aspekta';
+	src: url('./assets/fonts/aspekta.woff2') format(woff2);
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
+
+html {
+	font-family: 'Aspekta', sans-serif;
+}

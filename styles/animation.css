@@ -3,6 +3,16 @@
  * All rights reserved.                         *
  ************************************************/
 
+@media (prefers-reduced-motion: no-preference) {
+	@view-transition {
+		navigation: auto;
+	}
+	
+	nav, address {
+		transition: grid-template-columns .2s, grid-template-rows .1s;
+	}
+}
+
 html {
 	overscroll-behavior: none;
 }

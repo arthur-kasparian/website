@@ -16,6 +16,25 @@
 	<link rel="stylesheet" href="styles/colors.css">
 	<link rel="stylesheet" href="styles/layout.css">
 	<link rel="stylesheet" href="styles/animation.css">
+	
+	<script>
+		const supportedLocales = ["en"]
+		
+		const userLocales = window.navigator.languages.map(locale => locale.split('-')[0])
+		
+		const preferredLocale = supportedLocales.find(locale => userLocales.includes(locale))
+		
+		const navigateToLocale = () =>
+			setTimeout(() => window.location.pathname = preferredLocale || supportedLocales[0],
+				4000
+			)
+		
+		navigateToLocale()
+		
+		window.addEventListener('pageshow', (event) => {
+			if (event.persisted) navigateToLocale()
+		})
+	</script>
 </head>
 <body>
  <main>

@@ -10,11 +10,41 @@ html {
 		height: 100%;
 		width: 100%;
 		
+		box-sizing: border-box;
+		
 		margin: 0;
 		padding: 1rem;
 		
-		h1, h2, h3, h4, h5, h6, p {
-			margin: 0;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+		justify-content: space-between;
+		align-content: space-between;
+		
+		main {
+			max-width: 20rem;
+			
+			grid-column: 1;
+			grid-row: 1 / span 2;
+		}
+		
+		nav {
+			grid-row: 1;
+		}
+		
+		address {
+			grid-row: 2;
+			align-content: end;
+			align-self: end;
+		}
+		
+		nav, address {
+			display: flex;
+			
+			grid-column: 2;
+			column-gap: .5rem;
+			justify-content: end;
+			height: fit-content;
 		}
 	}
 }

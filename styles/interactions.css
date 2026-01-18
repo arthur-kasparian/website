@@ -3,15 +3,10 @@
  * All rights reserved.                         *
  ************************************************/
 
-html {
-	color-scheme: light dark;
-	
-	a:hover, a:focus, a.active, ::selection {
-		background-color: CanvasText;
-		color: Canvas;
-	}
+address, nav {
 	
 	a {
-		color: inherit;
+		user-select: none;
+		-webkit-user-select: none;
 	}
 }

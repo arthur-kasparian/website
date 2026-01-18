@@ -3,18 +3,74 @@
  * All rights reserved.                         *
  ************************************************/
 
+:root {
+	--page-padding: 1rem;
+}
+
 html {
 	height: 100%;
 	
 	body {
 		height: 100%;
-		width: 100%;
 		
+		box-sizing: border-box;
 		margin: 0;
-		padding: 1rem;
+		padding: var(--page-padding);
 		
-		h1, h2, h3, h4, h5, h6, p {
-			margin: 0;
+		display: grid;
+		grid-template-columns: auto auto;
+		grid-template-rows: auto auto;
+		justify-content: space-between;
+		align-content: space-between;
+		justify-items: end;
+		column-gap: 2rem;
+		
+		main {
+			max-width: 25rem;
+		}
+		
+		nav, address {
+			position: sticky;
+			right: 0;
+			grid-column: 2;
+			
+			height: fit-content;
+			
+			display: grid;
+			
+			column-gap: .5rem;
+			row-gap: .5rem;
+		}
+		
+		nav {
+			top: var(--page-padding);
+			grid-row: 1;
+		}
+		
+		address {
+			bottom: var(--page-padding);
+			grid-row: 2;
+		}
+	}
+}
+
+@media (min-width: 601px) {
+	address, nav {
+		grid-auto-flow: column;
+		grid-auto-columns: auto;
+	}
+}
+
+@media (max-width: 600px) {
+	address, nav {
+		grid-auto-flow: row;
+		grid-auto-rows: auto;
+		
+		justify-items: end;
+		
+		a {
+			writing-mode: sideways-lr;
+			rotate: 180deg;
 		}
 	}
 }

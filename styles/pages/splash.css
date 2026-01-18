@@ -4,14 +4,22 @@
  ************************************************/
 
 html {
-	color-scheme: light dark;
+	height: 100%;
 	
-	a:hover, a:focus, a.active, ::selection {
-		background-color: CanvasText;
-		color: Canvas;
-	}
-	
-	a {
-		color: inherit;
+	body {
+		height: 100%;
+		margin: 0;
+		
+		main {
+			height: 100%;
+			
+			display: grid;
+			align-content: center;
+			justify-items: center;
+			
+			h1 {
+				width: fit-content;
+			}
+		}
 	}
 }

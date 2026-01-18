@@ -4,14 +4,13 @@
  ************************************************/
 
 html {
-	color-scheme: light dark;
+	overscroll-behavior: none;
 	
-	a:hover, a:focus, a.active, ::selection {
-		background-color: CanvasText;
-		color: Canvas;
-	}
-	
-	a {
-		color: inherit;
+	address, nav {
+		
+		a {
+			user-select: none;
+			-webkit-user-select: none;
+		}
 	}
 }

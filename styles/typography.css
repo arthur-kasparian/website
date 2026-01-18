@@ -28,9 +28,8 @@ html {
 	
 	p {
 		font-weight: 500;
-		max-width: 30rem;
 		
-		line-height: 1;
+		line-height: 1.25;
 		
 		text-align: justify;
 		hyphens: auto;

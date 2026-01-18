@@ -12,7 +12,3 @@
 		transition: grid-template-columns .2s, grid-template-rows .1s;
 	}
 }
-
-html {
-	overscroll-behavior: none;
-}

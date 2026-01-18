@@ -3,10 +3,14 @@
  * All rights reserved.                         *
  ************************************************/
 
-address, nav {
+html {
+	overscroll-behavior: none;
 	
-	a {
-		user-select: none;
-		-webkit-user-select: none;
+	address, nav {
+		
+		a {
+			user-select: none;
+			-webkit-user-select: none;
+		}
 	}
 }

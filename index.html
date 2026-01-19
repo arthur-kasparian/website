@@ -9,36 +9,32 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	
+	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+	
 	<title>Arthur Kasparian</title>
 	<meta name="description" content="Software developer and computer science graduate.">
+	<meta name="author" content="Arthur Kasparian">
 	
-	<link rel="stylesheet" href="styles/typography.css">
-	<link rel="stylesheet" href="styles/colors.css">
-	<link rel="stylesheet" href="styles/layout.css">
-	<link rel="stylesheet" href="styles/animation.css">
+	<meta name="theme-color" content="Canvas">
 	
-	<script>
-		const supportedLocales = ["en"]
-		
-		const userLocales = window.navigator.languages.map(locale => locale.split('-')[0])
-		
-		const preferredLocale = supportedLocales.find(locale => userLocales.includes(locale))
-		
-		const navigateToLocale = () =>
-			setTimeout(() => window.location.pathname = preferredLocale || supportedLocales[0],
-				4000
-			)
-		
-		navigateToLocale()
-		
-		window.addEventListener('pageshow', (event) => {
-			if (event.persisted) navigateToLocale()
-		})
-	</script>
+	<meta name="robots" content="index,nofollow">
+	<meta name="googlebot" content="index,nofollow,notranslate">
+	
+	<link rel="stylesheet" href="/styles/typography.css">
+	<link rel="stylesheet" href="/styles/colors.css">
+	<link rel="stylesheet" href="/styles/animation.css">
+	<link rel="stylesheet" href="/styles/pages/splash.css">
+	
+	<script src="/scripts/schemaOrgInfo.js"></script>
+	<script src="/scripts/navigation/splashNavigation.js" type="module"></script>
 </head>
 <body>
  <main>
 	 <h1>Arthur Kasparian</h1>
+	 
+	 <noscript>
+		 <a href="/en/">Enter Website</a>
+	 </noscript>
  </main>
 </body>
 </html>

@@ -6,7 +6,8 @@
 // Content & i18n
 const pageLabels = {
 	HOME: {
-		en: "Home"
+		en: "Home",
+		ro: "Acasă"
 	}
 }
 

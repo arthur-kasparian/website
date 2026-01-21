@@ -7,6 +7,7 @@ const template = document.createElement('template');
 template.innerHTML = `
 	<address>
 		<a href="https://linkedin.com/in/arthurkasparian" target="_blank">LinkedIn</a>
+		<a href="https://github.com/arthur-kasparian" target="_blank">GitHub</a>
 		<a href="mailto:contact@career.arthur.kasparian.ro">E-mail</a>
 	</address>
 `;

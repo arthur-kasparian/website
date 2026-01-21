@@ -6,7 +6,8 @@
 // Content & i18n
 const pageLabels = {
 	HOME: {
-		en: "Home"
+		en: "Home",
+		ro: "Acasă"
 	}
 }
 
@@ -21,7 +22,10 @@ const template = document.createElement("template")
 template.innerHTML = `
 	<nav>
 		${pages.map(page => (
-			`<a href="/${locale}/${page.url}" class="${document.location.pathname.slice(4) === page.url ? "active" : null}">${page.label[locale] ?? page.label.en}</a>`
+			`<a
+				href="/${locale}/${page.url}"
+				class="${document.location.pathname.split('/')[2] === page.url ? "active" : null}"
+			>${page.label[locale] ?? page.label.en}</a>`
 		)).join("")}
 	</nav>
 `

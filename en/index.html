@@ -12,7 +12,7 @@
 	<meta http-equiv="Content-Security-Policy" content="default-src 'self'">
 	
 	<title>Arthur Kasparian | Homepage</title>
-	<meta name="description" content="General information about Arthur Kasparian, a back-end developer and computer science graduate.">
+	<meta name="description" content="The homepage of Arthur Kasparian's career website.">
 	<meta name="author" content="Arthur Kasparian">
 	
 	<meta name="theme-color" content="Canvas">
@@ -28,25 +28,36 @@
 	
 	<script type="module" src="/components/siteNavigation.js"></script>
 	<script type="module" src="/components/contactInformation.js"></script>
+	<script type="module" src="/components/languageSelector.js"></script>
+	
+	<link rel="prefetch" href="/ro/">
 </head>
 <body>
+	<header>
+		<site-navigation></site-navigation>
+	</header>
+	
 	<main>
 		<article>
-			<h1>Arthur Kasparian</h1>
+			<header>
+				<h1>Arthur Kasparian</h1>
+			</header>
 			
 			<p>Back-end developer focused on systems, APIs, and data; comfortable working across multiple programming languages and technologies.</p>
 			
 			<p>Academic and early professional experience in Java, JavaScript, and relational database systems, alongside exposure to a broader set of tools and technologies. Bachelor of Science in Computer Science.</p>
 			
-			<p>Based in Bucharest, Romania; authorised for local employment in Romania and remote roles within the EU. Open to junior and entry-level back-end software engineering positions.</p>
+			<p>Based in Bucharest, Romania; authorised for local employment in Romania and remote roles within the EU. Open to junior and entry-level back-end software development positions.</p>
 			
 			<p>This website documents professional background and ongoing technical development. It is not a portfolio, personal, or freelance website. Project details, technical experience, and skills are provided on dedicated sections.</p>
 			
-			<p> Webpages here are available in multiple languages. Content accuracy is guaranteed only for those personally spoken: Armenian, Arabic, English, and French. Romanian proficiency is currently in progress.</p>
+			<p>Webpages here are available in multiple languages. Content accuracy is guaranteed only for those personally spoken: Armenian, Arabic, English, and French. Romanian proficiency is currently in progress.</p>
 		</article>
 	</main>
 
-	<site-navigation></site-navigation>
-	<contact-information></contact-information>
+	<footer>
+		<contact-information></contact-information>
+		<language-selector></language-selector>
+	</footer>
 </body>
 </html>

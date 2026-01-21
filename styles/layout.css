@@ -23,13 +23,13 @@ html {
 		justify-content: space-between;
 		align-content: space-between;
 		justify-items: end;
-		column-gap: 2rem;
+		column-gap: 3rem;
 		
 		main {
 			max-width: 25rem;
 		}
 		
-		nav, address {
+		> header, > footer {
 			position: sticky;
 			right: 0;
 			grid-column: 2;
@@ -42,35 +42,57 @@ html {
 			row-gap: .5rem;
 		}
 		
-		nav {
+		> header {
 			top: var(--page-padding);
 			grid-row: 1;
 		}
 		
-		address {
+		> footer {
 			bottom: var(--page-padding);
 			grid-row: 2;
+			
+			address, nav {
+				display: flex;
+			}
+			
+			> :not(address)::before {
+				content: "·";
+				margin-inline: .5rem;
+			}
 		}
 	}
 }
 
 @media (min-width: 601px) {
-	address, nav {
-		grid-auto-flow: column;
-		grid-auto-columns: auto;
+	body {
+		> header, > footer {
+			grid-auto-flow: column;
+			grid-auto-columns: auto;
+		}
+		
+		address, nav {
+			column-gap: .5rem;
+		}
 	}
 }
 
 @media (max-width: 600px) {
-	address, nav {
-		grid-auto-flow: row;
-		grid-auto-rows: auto;
-		
-		justify-items: end;
-		
-		a {
-			writing-mode: sideways-lr;
-			rotate: 180deg;
+	body {
+		> header, > footer {
+			grid-auto-flow: row;
+			grid-auto-rows: auto;
+			
+			justify-items: end;
+			
+			a {
+				writing-mode: sideways-lr;
+				rotate: 180deg;
+			}
 		}
+	}
+	
+	address, nav {
+		flex-direction: column;
+		row-gap: .5rem;
 	}
 }

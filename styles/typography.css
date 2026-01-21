@@ -12,7 +12,7 @@
 }
 
 html {
-	font-family: 'Aspekta', sans-serif;
+	font-family: 'Aspekta', system-ui, ui-sans-serif, sans-serif;
 	
 	font-size: 14px;
 	

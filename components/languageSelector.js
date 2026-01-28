@@ -3,12 +3,10 @@
  * All rights reserved.                         *
  ************************************************/
 
-const supportedLanguages = ['en', 'ro']
+import { websiteLanguages } from "../scripts/utils/i18n.js"
 
 const currentLanguage = document.documentElement.lang
-const finalLanguages = supportedLanguages.filter(language => language !== currentLanguage)
-
-
+const finalLanguages = websiteLanguages.filter(language => language !== currentLanguage)
 
 const template = document.createElement('template')
 template.innerHTML = `
@@ -20,7 +18,6 @@ template.innerHTML = `
 `
 
 class LanguageSelector extends HTMLElement {
-	
 	connectedCallback() {
 		this.replaceWith(template.content)
 	}

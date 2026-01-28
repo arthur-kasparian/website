@@ -2,11 +2,13 @@
  * Copyright (c) 2026 Arthur Kasparian          *
  * All rights reserved.                         *
  ************************************************/
+import {getCurrentBreadcrumbs} from "../scripts/utils/navigation.js"
 
 // Content & i18n
 const pageLabels = {
 	HOME: {
-		en: "Home"
+		en: "Home",
+		ro: "Acasă"
 	}
 }
 
@@ -23,7 +25,7 @@ template.innerHTML = `
 		${pages.map(page => (
 			`<a
 				href="/${locale}/${page.url}"
-				class="${document.location.pathname.split('/')[2] === page.url ? "active" : null}"
+				class="${getCurrentBreadcrumbs()[0] === page.url ? "active" : null}"
 			>${page.label[locale] ?? page.label.en}</a>`
 		)).join("")}
 	</nav>

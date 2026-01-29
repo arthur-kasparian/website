@@ -16,18 +16,31 @@ html {
 	
 	font-size: 14px;
 	
-	h1, h2, h3, h4, h5, h6, p {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	text-rendering: optimizeLegibility;
+	
+	h1, p {
 		margin: 0;
 	}
 	
+	h2 {
+		margin: 2em 0 0 0;
+	}
+	
+	h3, h4, h5, h6 {
+		margin: 1em 0 0 0;
+	}
+	
 	h1, h2, h3, h4, h5, h6, a {
-		font-weight: 650;
+		font-weight: 700;
 		font-size: 1rem;
+		letter-spacing: .02rem;
 		text-transform: uppercase;
 	}
 	
 	p {
-		font-weight: 500;
+		font-weight: 550;
 		
 		line-height: 1.25;
 		
@@ -42,5 +55,13 @@ html {
 	a {
 		text-decoration: none;
 		font-style: normal;
+	}
+	
+	article {
+		a {
+			text-decoration: underline;
+			text-underline-offset: 2px;
+			text-decoration-thickness: .1rem;
+		}
 	}
 }

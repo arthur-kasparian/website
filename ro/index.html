@@ -26,15 +26,15 @@
 	<link rel="stylesheet" href="/styles/animation.css">
 	<link rel="stylesheet" href="/styles/interactions.css">
 	
-	<script type="module" src="/components/siteNavigation.js"></script>
-	<script type="module" src="/components/contactInformation.js"></script>
-	<script type="module" src="/components/languageSelector.js"></script>
-	
 	<link rel="prefetch" href="/en/">
+	<link rel="prefetch" href="/ro/technical/">
 </head>
 <body>
 <header>
-	<site-navigation></site-navigation>
+	<nav>
+		<a href="./" class="active">Acasă</a>
+		<!--<a href="./technical">Tehnic</a>-->
+	</nav>
 </header>
 
 <main>
@@ -56,8 +56,16 @@
 </main>
 
 <footer>
-	<contact-information></contact-information>
-	<language-selector></language-selector>
+	
+	<address>
+		<a href="https://linkedin.com/in/arthurkasparian" target="_blank">LinkedIn</a>
+		<a href="https://github.com/arthur-kasparian" target="_blank">GitHub</a>
+		<a href="mailto:contact@career.arthur.kasparian.ro">E-mail</a>
+	</address>
+	
+	<nav>
+		<a href="/en/">EN</a>
+	</nav>
 </footer>
 </body>
 </html>

@@ -25,8 +25,34 @@
 	<link rel="stylesheet" href="/styles/animation.css">
 	<link rel="stylesheet" href="/styles/pages/splash.css">
 	
-	<script src="/scripts/schemaOrgInfo.js"></script>
-	<script src="/scripts/splashNavigation.js" type="module"></script>
+	<script type="application/ld+json">
+		{
+			"@context": "https://schema.org",
+			"@type": "Person",
+			"name": "Arthur Kasparian",
+			"jobTitle": "Back-end Developer",
+			"url": "https://career.arthur.kasparian.ro",
+			"sameAs": [
+				"https://www.linkedin.com/in/arthurkasparian"
+			]
+		}
+	</script>
+	
+	<script>
+		const websiteLanguages = ["en", "ro"]
+		const preferredLanguage = window.navigator.languages.map(language => language.split('-')[0]).find(language => websiteLanguages.includes(language))
+		
+		const navigateToLanguage = () =>
+			setTimeout(() => window.location.pathname = preferredLanguage || websiteLanguages[0], 4000)
+		
+		// First time navigation
+		navigateToLanguage()
+		
+		// Fixes issues with bfcache not re-executing above script
+		window.addEventListener('pageshow', (event) => {
+			if (event.persisted) navigateToLanguage()
+		})
+	</script>
 </head>
 <body>
  <main>

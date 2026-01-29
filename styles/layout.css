@@ -40,6 +40,10 @@ html {
 			
 			column-gap: .5rem;
 			row-gap: .5rem;
+			
+			address, nav {
+				display: flex;
+			}
 		}
 		
 		> header {
@@ -50,10 +54,6 @@ html {
 		> footer {
 			bottom: var(--page-padding);
 			grid-row: 2;
-			
-			address, nav {
-				display: flex;
-			}
 			
 			> :not(address)::before {
 				content: "·";
@@ -68,10 +68,10 @@ html {
 		> header, > footer {
 			grid-auto-flow: column;
 			grid-auto-columns: auto;
-		}
-		
-		address, nav {
-			column-gap: .5rem;
+			
+			address, nav {
+				column-gap: .5rem;
+			}
 		}
 	}
 }
@@ -84,15 +84,15 @@ html {
 			
 			justify-items: end;
 			
+			address, nav {
+				flex-direction: column;
+				row-gap: .5rem;
+			}
+			
 			a {
 				writing-mode: sideways-lr;
 				rotate: 180deg;
 			}
 		}
-	}
-	
-	address, nav {
-		flex-direction: column;
-		row-gap: .5rem;
 	}
 }

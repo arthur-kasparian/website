@@ -26,12 +26,15 @@
 	<link rel="stylesheet" href="/styles/animation.css">
 	<link rel="stylesheet" href="/styles/interactions.css">
 	
-	<script type="module" src="/components/siteNavigation.js"></script>
-	<script type="module" src="/components/contactInformation.js"></script>
+	<link rel="prefetch" href="/ro/">
+	<link rel="prefetch" href="/en/technical/">
 </head>
 <body>
 	<header>
-		<site-navigation></site-navigation>
+		<nav>
+			<a href="./" class="active">Home</a>
+			<a href="./technical/">Technical</a>
+		</nav>
 	</header>
 	
 	<main>
@@ -53,7 +56,15 @@
 	</main>
 
 	<footer>
-		<contact-information></contact-information>
+		<address>
+			<a href="https://linkedin.com/in/arthurkasparian" target="_blank">LinkedIn</a>
+			<a href="https://github.com/arthur-kasparian" target="_blank">GitHub</a>
+			<a href="mailto:contact@career.arthur.kasparian.ro">E-mail</a>
+		</address>
+		
+		<nav>
+			<a href="/ro/">RO</a>
+		</nav>
 	</footer>
 </body>
 </html>
